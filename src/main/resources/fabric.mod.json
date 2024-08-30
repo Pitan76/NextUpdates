@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "nextupdates",
+  "version": "${version}",
+  "name": "Next Updates",
+  "description": "Next Updates is a Minecraft mod designed to bring features and elements from Minecraft versions 1.19 to 1.21 into version 1.18.2",
+  "authors": [
+    "Pitan"
+  ],
+  "contact": {
+
+  },
+  "license": "MIT",
+  "icon": "assets/nextupdates/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "net.pitan76.nextupdates.client.NextUpdatesClient"
+    ],
+    "main": [
+      "net.pitan76.nextupdates.NextUpdates"
+    ]
+  },
+  "mixins": [
+    "nextupdates.mixins.json",
+    {
+      "config": "nextupdates.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": "*",
+    "fabric": "*",
+    "minecraft": "1.18.*"
+  }
+}
